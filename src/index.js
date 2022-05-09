@@ -103,7 +103,7 @@ const isAuthorized = (authorization) => {
 
 const app = express();
 
-app.get("/topup", (req, res) => {
+app.post("/topup", (req, res) => {
   const { count } = req.query;
 
   if (!isAuthorized(req.get("authorization"))) {
